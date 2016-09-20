@@ -9,21 +9,21 @@ main()
   upper = 300;
   step = 20;
 
-  fahr = lower;
+  fahr = upper;
   printf("Fahrenheit\tCelsius\n");
 
-  while (fahr <= upper)
+  while (fahr >= lower)
   {
     celsius = (5.0/9.0) * (fahr-32);
     printf("%3.0f\t\t%6.1f\n", fahr, celsius);
-    fahr = fahr + step;
+    fahr = fahr - step;
   }
-  fahr = lower;
+  fahr = upper;
   printf("\nCelsius\t\tFahrenheit\n");
-  while (fahr <= upper)
+  while (fahr >= lower)
   {
     celsius = (5.0/9.0) * (fahr-32);
     printf("%6.1f\t\t%3.0f\n", celsius, celsius * (9.0/5.0) + 32);
-    fahr = fahr + step;
+    fahr = fahr - step;
   }
 }
